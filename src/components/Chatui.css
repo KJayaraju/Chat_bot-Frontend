@@ -296,6 +296,7 @@ body {
 .input-actions {
   display: flex;
   gap: 8px;
+   overflow: hidden;
 }
 
 .input-actions button {
@@ -312,7 +313,9 @@ body {
   border: none;
   color: white;
   outline: none;
+  min-width: 0; /* 🔥 IMPORTANT */
 }
+
 
 /* Send */
 .send-btn {
