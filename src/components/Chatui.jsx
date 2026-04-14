@@ -60,7 +60,7 @@ export default function ChatUI() {
     };
 
     fetchChats();
-  }, []);
+  }, [BASE_URL]);
 
   // ✅ AUTO SCROLL
   useEffect(() => {
