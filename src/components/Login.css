@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.auth-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  padding: 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 380px;
+  height: 450px;
+  perspective: 1000px;
+}
+
+.card-face {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 30px 25px;
+  color: white;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  width: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.6s ease;
+}
+
+.front {
+  transform: rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.card.flipped .front {
+  transform: rotateY(-180deg);
+}
+
+.card.flipped .back {
+  transform: rotateY(0deg);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+.auth-image {
+  width: 20%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #6c63ff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background: #5a54d1;
+}
+
+.switch-text {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.switch-text span {
+  color: #ffd369;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .card-face {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .input-group input {
+    padding: 8px;
+  }
+}
